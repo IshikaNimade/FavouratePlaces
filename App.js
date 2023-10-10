@@ -106,6 +106,7 @@ export default function App() {
     init()
       .then(() => {
         setDbInitialized(true);
+        console.log("hello");
       })
       .catch((err) => {
         console.log(err);

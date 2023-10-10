@@ -1,79 +1,112 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# React Native Firebase Places App
 
-# Getting Started
+This is a React Native application that uses Firebase as the backend, Axios for API calls, and Firebase Auth for login and signup. 
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+The app allows users to view a list of favorite places with their locations, add new places, and mark them on Google Maps. User data is securely stored using SQLite on the device.
 
-## Step 1: Start the Metro Server
+![App Demo](demo.gif)
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+## Table of Contents
 
-To start Metro, run the following command from the _root_ of your React Native project:
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Screens](#screens)
+- [Dependencies](#dependencies)
+- [Contributing](#contributing)
+- [License](#license)
 
-```bash
-# using npm
-npm start
+## Features
 
-# OR using Yarn
-yarn start
-```
+- Firebase Authentication for login and signup.
+- Navigation between login, signup, and the main app.
+- List of favorite places with locations.
+- Integration with Google Maps for selecting and marking locations.
+- Secure storage of user data using SQLite.
+- Logout functionality.
 
-## Step 2: Start your Application
+## Installation
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
+1. Clone this repository to your local machine:
 
-### For Android
+   ```bash
+   git clone https://github.com/your-username/react-native-firebase-places-app.git
+   ```
 
-```bash
-# using npm
-npm run android
+2. Navigate to the project directory:
 
-# OR using Yarn
-yarn android
-```
+   ```bash
+   cd react-native-firebase-places-app
+   ```
 
-### For iOS
+3. Install dependencies:
 
-```bash
-# using npm
-npm run ios
+   ```bash
+   npm install
+   ```
 
-# OR using Yarn
-yarn ios
-```
+4. Create a Firebase project and configure it in your app. Replace the Firebase configuration in `src/config/firebase.js` with your own Firebase project configuration.
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+5. Set up Google Maps integration by following the instructions in the [React Native Maps documentation](https://github.com/react-native-maps/react-native-maps).
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+6. Ensure that you have a working React Native development environment set up. If not, you can follow the [official React Native documentation](https://reactnative.dev/docs/environment-setup).
 
-## Step 3: Modifying your App
+7. Run the app on your preferred platform (iOS or Android):
 
-Now that you have successfully run the app, let's modify it.
+   - iOS:
 
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
+     ```bash
+     npx react-native run-ios
+     ```
 
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
+   - Android:
 
-## Congratulations! :tada:
+     ```bash
+     npx react-native run-android
+     ```
 
-You've successfully run and modified your React Native App. :partying_face:
+## Usage
 
-### Now what?
+1. Upon launching the app, you will be directed to the login page.
+2. You can either log in with your existing account or navigate to the signup page to create a new account.
+3. After logging in, you will be taken to the main app, where you can view your list of favorite places.
+4. Use the bottom navigation to switch between pages.
+5. To add a new place, navigate to the "Add Place" page, where you can provide a title, image, and either the current location or pick a location on the map.
+6. Mark the place on the map and save it by clicking the save button.
+7. The newly added place will appear in the list of favorite places on the main app screen.
+8. You can log out by clicking the "Logout" button in the profile section.
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
+## Screens
 
-# Troubleshooting
+The app consists of the following screens:
 
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+- **Login**: Allows users to log in to their account.
+- **Signup**: Allows new users to create an account.
+- **Main App**: Displays the list of favorite places.
+- **Add Place**: Allows users to add a new place with a title, image, and location.
+- **Map**: Integration with Google Maps for selecting and marking locations.
 
-# Learn More
+## Dependencies
 
-To learn more about React Native, take a look at the following resources:
+The following major dependencies are used in this project:
 
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+- React Native
+- Firebase
+- Axios
+- React Navigation
+- React Native Maps
+- SQLite
+
+You can find a complete list of dependencies in the `package.json` file.
+
+## Contributing
+
+Contributions are welcome! If you'd like to contribute to this project, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and test thoroughly.
+4. Create a pull request, explaining the changes you made and why.
+
+
+Happy coding! 😊

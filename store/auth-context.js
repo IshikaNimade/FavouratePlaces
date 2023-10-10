@@ -27,6 +27,8 @@ function AuthContextProvider({ children }) {
     isAuthenticated: !!authToken,
     authenticate: authenticate,
     logout: logout,
+
+    
   };
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
